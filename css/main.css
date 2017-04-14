@@ -42,7 +42,7 @@ footer{
 
 #snow{
 	background: none;
-	background-image: url("../src/faintflakes.png");
+	background-image: url("../faintflakes.png");
 	height: 100%;
 	left: 0;
 	position: absolute;
