@@ -8,34 +8,28 @@ h1, h2, h3, h4, h5, h6, p{
 }
 footer{
 	bottom:0;
-	background:#573B0C;
+	background:#FFFFFF;
 	display: block;
 	position: absolute;
 	text-align:center;
 	left:0;
 	right:0;
+	text-shadow: 1px 2px #000000;
+	outline: 1px 1px #000000;
 }
 .lander{
 	height: 100%;
 	width: 100%;
 	position: fixed;
 }
-.lander-pad{
+.frost-pad{
 	display: block;
 	position: absolute;
-	height: 6%;
-	-webkit-box-shadow: inset 0px -5px 10px -4px rgba(1,6,20,1);
-	-moz-box-shadow: inset 0px -5px 10px -4px rgba(1,6,20,1);
-	box-shadow: inset 0px -5px 10px -4px rgba(1,6,20,1);
-	background:#999999;
 	margin: 0 auto;
 	text-align: center;
+	top:40%;
 	left:0;
 	right:0;
-}
-.lander-pad_pilots{
-	background-image: url("../tree.png");
-	
 }
 .treearea{
 	bottom:0%;
