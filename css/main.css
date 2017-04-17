@@ -47,10 +47,26 @@ footer{
 	left:50px;
 	right:50px;
 }
+.phrase1 h1{
+	opacity: 0;
+	font-size: 3em;
+}
+.phrase2 h2{
+	opacity: 0;
+	font-size: 1em;
+}
+.phrase3 h2{
+	opacity: 0;
+	font-size: 1em;
+}
 #moon_container{
+	-webkit-animation: diagonal-review 7s forwards;
+  	animation: diagonal-reveal 7s forwards;
 	display: block;
-	bottom: -80%;
-	left: -80%;
+	position: relative;
+	z-index: 1;
+	left: 80%;
+    bottom: 0%;
 	height:191px;
 	width: 212px;
 	background-image: url("../src/crescent_moon.png");
@@ -191,7 +207,7 @@ ul.frost-icons{
 	position: absolute;
 	top: 0;
 	width: 100%;
-	z-index:1;
+	z-index: 2;
 	-webkit-animation: snow 25s linear infinite;
 	-moz-animation: snow 25s linear infinite;
 	-ms-animation: snow 25s linear infinite;
@@ -233,46 +249,62 @@ ul.frost-icons{
   75% {background-position: 400px 375px, 100px 150px, -15px 225px}
   100% {background-position: 500px 500px, 200px 200px, 300px 300px;}
 }
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+.fade-in {
+	opacity:0;
+	-webkit-animation:fadeIn ease-in 1;
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+ 
+	-webkit-animation-fill-mode:forwards;  
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+ 
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	animation-duration:1s;
+}
+.fade-in.phrase1 {
+-webkit-animation-delay: 1s;
+-moz-animation-delay: 1s;
+animation-delay: 1s;
+}
+.fade-in.phrase2 {
+-webkit-animation-delay: 1.75s;
+-moz-animation-delay: 1.75s;
+animation-delay: 1.75s;
+}
+.fade-in.phrase3 {
+-webkit-animation-delay: 2.5s;
+-moz-animation-delay: 2.5s;
+animation-delay: 2.5s;
+}
 
-
-
-@-webkit-keyframes zoomInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
-    transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
-    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+@-webkit-keyframes diagonal-reveal {
+  0% {
+    bottom: -75%;
+    left: 0%;
+    transform: translate3d(1,1,1);
   }
-
-  60% {
-    opacity: 1;
-    -webkit-transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
-    transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  100% {
+    left: 80%;
+    bottom: 0%;
+    transform: translate3d(.5,.5,.5);
   }
 }
 
-@keyframes zoomInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
-    transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
-    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+@keyframes diagonal-reveal {
+  0% {
+    bottom: -75%;
+    left: 0%;
+    transform: scale3d(1,1,1);
   }
-
-  60% {
-    opacity: 1;
-    -webkit-transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
-    transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  100% {
+    left: 80%;
+    bottom: 0%;
+    transform: scale3d(.5,.5,.5);
+    background-image: url("../src/crescent_moon.png"),url("../src/crescent_moon_glow.png");
   }
 }
-
-.zoomInUp {
-  -webkit-animation-name: zoomInUp;
-  animation-name: zoomInUp;
-}	
