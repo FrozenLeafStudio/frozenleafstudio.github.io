@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 h2#mid{
 	position: relative;
-	top:30%;
+	top:25%;
 }
 
 footer{
@@ -43,7 +43,7 @@ footer{
 	margin: 0 auto;
 	text-align: center;
 	height:60%;
-	top:15%;
+	top:20%;
 	left:50px;
 	right:50px;
 }
@@ -280,6 +280,11 @@ animation-delay: 1.75s;
 -webkit-animation-delay: 2.5s;
 -moz-animation-delay: 2.5s;
 animation-delay: 2.5s;
+}
+.fade-in.frost-icons{
+	-webkit-animation-delay: 3s;
+	-moz-animation-delay: 3s;
+	animation-delay: 3s;
 }
 
 @-webkit-keyframes diagonal-reveal {
