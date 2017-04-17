@@ -1,3 +1,8 @@
+/* PAGE LAYOUT */
+/**/
+/**/
+/**/
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);	
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #3a405a;
@@ -6,6 +11,11 @@ body {
 h1, h2, h3, h4, h5, h6, p{
 	color: #ffffff;
 }
+h2#mid{
+	position: relative;
+	top:30%;
+}
+
 footer{
 	bottom:0;
 	background:#FFFFFF;
@@ -17,6 +27,11 @@ footer{
 	text-shadow: 1px 2px #000000;
 	outline: 1px 1px #000000;
 }
+
+/*INDIVIDUAL ELEMENT STYLING*/
+/**/
+/**/
+/**/
 .lander{
 	height: 100%;
 	width: 100%;
@@ -27,43 +42,58 @@ footer{
 	position: absolute;
 	margin: 0 auto;
 	text-align: center;
-	top:40%;
-	left:0;
-	right:0;
+	height:60%;
+	top:15%;
+	left:50px;
+	right:50px;
 }
-.treearea{
+#moon_container{
+	display: block;
+	bottom: -80%;
+	left: -80%;
+	height:191px;
+	width: 212px;
+	background-image: url("../src/crescent_moon.png");
+	
+}
+.tree_container{
 	bottom:0%;
 	left: 0px;
-	position:absolute;
+	position: absolute;
 	height: 800px;
-	width: 550px;
+	width: 700px;
 	overflow:hidden;
 }
 .treeload{
+	position: absolute;
+	display: block;
+	bottom: -10%;
+	left: -15%;
 	height: 100%;
 	width: 100%;
-	background-image: url("../tree.png")
+	background-image: url("../src/tree.png");
+	background-repeat: no-repeat;
 }
 .snowpile1{
-	top:80%;
+	top: 80%;
 	border-top-right-radius: 100px;
 	background: #FFFFFF;
 	position: relative;
 	height: 200px;
-	width:400px;
+	width:550px;
 	max-width:100%;
 }
 .snowpile2{
-	top: 53%;
-	left: 225px;
+	top: 60%;
+	left: 60%;
 	position:relative;
 	background: #FFFFFF;
 	border-radius: 100%;
 	height: 150px;
 	width: 200px;
 }.snowpile3{
-	top: 34%;
-	left: 100px;
+	bottom: -32%;
+	left: 21%;
 	position: relative;
 	background: #FFFFFF;
 	border-radius: 100%;
@@ -71,18 +101,18 @@ footer{
 	width: 200px;
 }
 .snowpile4{
-	top: 7%;
+	top: 6.5%;
 	left: -30px;
 	position: relative;
 	background: #FFFFFF;
 	border-radius: 100%;
 	color: #FFFFFF;
-	height: 180px;
+	height: 110px;
 	width: 200px;
 }
 .snowpile5{
 	top: -6%;
-	left: 320px;
+	left: 42%;
 	position: relative;
 	background: #FFFFFF;
 	border-radius: 100%;
@@ -90,11 +120,69 @@ footer{
 	height: 120px;
 	width: 160px;
 }
-#pad-title{
-	margin: 7px auto;
-	text-shadow: 2px 2px #000000;
-}
 
+.frostie-icons {
+    width: 350px;
+    display:block;
+    margin: 0 auto;
+    position: relative;
+    top: 25%;
+}
+.frost-icon {
+    color: #fff;
+}
+ul.frost-icons{
+	top:45%;
+	padding:0;
+    margin-top: 10px;
+}
+.frost-icons li {
+    vertical-align: top;
+    display: inline;
+    height: 100px;
+    -webkit-transition: all 0.5s linear;
+          transition: all 0.5s linear;
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+}
+.frost-icons a {
+    color: #fff;
+    text-decoration: none;
+}
+.fa-linkedin {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+}
+.fa-linkedin:hover {
+    background-color: #0073a4;
+}
+.fa-github{
+	padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+}
+.fa-github:hover{
+	background-color: #0073a4;
+}
+.fa-envelope{
+	padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+}
+.fa-envelope:hover{
+	background-color: #0073a4;
+}
+/* CSS ANIMATIONS */
 #snow{
 	background: none;
 	background-image: url("../src/faintsnow.png"), url("../src/smallsnow.png"), url("../src/sidesnow.png");
