@@ -2,7 +2,7 @@
 /**/
 /**/
 /**/
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);	
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #3a405a;
@@ -69,8 +69,6 @@ footer{
     bottom: 0%;
 	height:191px;
 	width: 212px;
-	background-image: url("../src/crescent_moon.png");
-	
 }
 .tree_container{
 	bottom:0%;
@@ -257,11 +255,11 @@ ul.frost-icons{
 	-webkit-animation:fadeIn ease-in 1;
 	-moz-animation:fadeIn ease-in 1;
 	animation:fadeIn ease-in 1;
- 
-	-webkit-animation-fill-mode:forwards;  
+
+	-webkit-animation-fill-mode:forwards;
 	-moz-animation-fill-mode:forwards;
 	animation-fill-mode:forwards;
- 
+
 	-webkit-animation-duration:1s;
 	-moz-animation-duration:1s;
 	animation-duration:1s;
@@ -307,9 +305,8 @@ animation-delay: 2.5s;
     transform: scale3d(1,1,1);
   }
   100% {
-    left: 80%;
-    bottom: 0%;
+    left: 85%;
+    bottom: 1%;
     transform: scale3d(.5,.5,.5);
-    background-image: url("../src/crescent_moon.png"),url("../src/crescent_moon_glow.png");
   }
 }
