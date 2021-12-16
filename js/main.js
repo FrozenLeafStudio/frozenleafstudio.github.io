@@ -4,7 +4,7 @@ window.onload = function(){
     shadowColour: 'black', // CSS background-colour value for the shaded part of the disc
     lightColour:  '#F7EAC6', // CSS background-colour value for the illuminated part of the disc
     diameter:      200,    // diameter of the moon/planets disc in pixels
-    earthshine :   0.1,    // between 0 and 1, the amount of light falling on the shaded part of the disc 0=none, 1=full illumination
+    earthshine :   0.2,    // between 0 and 1, the amount of light falling on the shaded part of the disc 0=none, 1=full illumination
     blur:          1
   };
 
@@ -33,7 +33,7 @@ window.onload = function(){
       return {phase: b, name: Moon.phases[b], isWaxing};
     }
   };
-  var current_moon = Moon.phase(today.getFullYear(), today.getMonth() + 1, today.getDate());
-  console.log(current_moon);
+  var current_moon = Moon.phase(today.getFullYear(), today.getMonth() + 1, today.getDate()+15);
+  console.log(current_moon, today.getDate()+15);
   drawPlanetPhase(document.getElementById("moon_container"), current_moon.name[1], current_moon.isWaxing, config);
 }
